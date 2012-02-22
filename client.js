@@ -5,6 +5,24 @@ var myApiKey = '9f1902427fb7159757f45ffe5a321746e4e95bcd';
 var mySwarm = '03d7320242228512a19d116ffd70e1c344676fbc';
 var myResource = '349b8886737239917a2ccbeabe222dd81e5ab75f';
 
+//List off all colors
+var color = {
+	0: 'blue', 
+	1: 'green',
+	2: 'yellow', 
+	3: 'red', 
+	4: 'purple', 
+	5: 'aqua', 
+	6: 'fuchsia', 
+	7: 'lime', 
+	8: 'olive', 
+	9: 'teal'
+};
+
+//Generates a random color between 1 and ten
+var randomNumber = Math.floor(Math.random()*10);
+var randomColor = color[randomNumber];
+
 //-----------------------------------------------------------------------------------------------------------------------------------------
 //Send the message to everybody.
 //-----------------------------------------------------------------------------------------------------------------------------------------
@@ -67,7 +85,7 @@ updateGrid = function(response)
 	var what = message.payload;
 	var whatSplit = what.message.split("-");
 	
-	document.querySelector('#' + whatSplit[0] + ' .' + whatSplit[1]).style.backgroundColor = whatSplit[2];
+	document.querySelector('#' + whatSplit[0] + ' .' + whatSplit[1]).style.backgroundColor = randomColor;
 };
 
 //-----------------------------------------------------------------------------------------------------------------------------------------

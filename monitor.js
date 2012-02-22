@@ -67,7 +67,6 @@ updateGrid = function(response)
 	var who = presence.from.resource;
 	var what = message.payload;
 	var whatSplit = what.message.split("-");
-
 	document.querySelector('#' + whatSplit[0] + ' .' + whatSplit[1]).style.backgroundColor = whatSplit[2];
 };
 
@@ -78,7 +77,7 @@ updateGrid = function(response)
 SWARM.connect({ apikey: myApiKey
 , swarms: mySwarm
 , resource: myResource
-, onmessage: updateList
+, onmessage: updateGrid
 , onpresence: updateResources
 , onconnect: connectHandler
 , onerror: errorHandler
