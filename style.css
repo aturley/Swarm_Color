@@ -1,0 +1,41 @@
+body
+{
+	font-family: Cabin, Arial, Helvetica, Sans-serif;
+	color: #404040;
+	
+	width: 700px;
+	margin: auto;
+}
+
+img
+{
+	position: relative;
+	top: 0px;
+	left: -490px;
+}
+
+h1
+{
+	color: #404040;
+	font-size: 1.4em;
+	font-weight: 700;
+	border-bottom: 1px solid #CFCDC9;
+	padding-bottom: 10 px;
+}
+
+h2
+{
+	color: #606473;
+	font-size: 1.2em;
+	font-weight: 700;
+	border-top: 1px solid #CFCDC9;
+	padding-top: 10 px;
+}
+
+ul
+{
+	list-style-type: none;
+	padding-left: 0px;
+	height: 100px;
+	overflow: auto;
+}
