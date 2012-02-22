@@ -39,3 +39,25 @@ ul
 	height: 100px;
 	overflow: auto;
 }
+
+td
+{
+	background-color: #404040;
+	margin: 10px;
+	width: 70px;
+	height: 70px;
+}
+
+#monitorTable
+{
+	position: relative;
+	width: 1500px;
+	top: 0px;
+	left: -480px;
+}
+
+#monitorTable td
+{
+	width: 150px;
+	height: 150px;
+}

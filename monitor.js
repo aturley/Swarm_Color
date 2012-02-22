@@ -33,7 +33,7 @@ errorHandler = function(response)
 //-----------------------------------------------------------------------------------------------------------------------------------------
 // alert to new or left chatters, and keep a list of current chatters.
 //-----------------------------------------------------------------------------------------------------------------------------------------
-updateChatter = function(response) 
+updateResources = function(response) 
 {
 	presence = JSON.parse(response).presence;
 	// Filter out swarm presence messages, which do not contain the 'type' field
@@ -57,6 +57,20 @@ updateChatter = function(response)
 	}
 };
 
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+//Update the colour of the elements of the grid
+//-----------------------------------------------------------------------------------------------------------------------------------------
+updateGrid = function(response) 
+{
+	message = JSON.parse(response).message;
+	var who = presence.from.resource;
+	var what = message.payload;
+
+	document.querySelector('#first .one').style.backgroundColor = what.message;
+
+};
+
 //-----------------------------------------------------------------------------------------------------------------------------------------
 // Join the swarm
 // All callbacks must be defined before calling SWARM.connect for it to work.
@@ -65,7 +79,7 @@ SWARM.connect({ apikey: myApiKey
 , swarms: mySwarm
 , resource: myResource
 , onmessage: updateList
-, onpresence: updateChatter
+, onpresence: updateResources
 , onconnect: connectHandler
 , onerror: errorHandler
 });
