@@ -34,3 +34,8 @@ ul
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 }
+
+strong
+{
+	color: blue;
+}
