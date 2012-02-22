@@ -40,6 +40,12 @@ ul
 	overflow: auto;
 }
 
+#grid
+{
+	border-top: 1px solid #CFCDC9;
+	padding-top: 10 px;
+}
+
 #grid td
 {
 	background-color: #404040;
@@ -48,10 +54,23 @@ ul
 	height: 70px;
 }
 
-#yourColor td
+#userColor td
 {
-	margin: 10px;
-	width: 70px;
-	height: 70px;
+	padding: 0px;
+	width: 20px;
+	height: 20px;
+}
+
+#userColor
+{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#yourColor
+{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0px;
 }
 
