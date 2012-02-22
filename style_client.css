@@ -40,10 +40,18 @@ ul
 	overflow: auto;
 }
 
-td
+#grid td
 {
 	background-color: #404040;
 	margin: 10px;
 	width: 70px;
 	height: 70px;
 }
+
+#yourColor td
+{
+	margin: 10px;
+	width: 70px;
+	height: 70px;
+}
+

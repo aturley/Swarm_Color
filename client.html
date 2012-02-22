@@ -15,7 +15,12 @@
 	
 	<h1>Try the power of the Swarm.</h1>
 
-	<table>
+	<p>
+		Your color is : <table id="yourColor"><tr><td><script>document.querySelector('#yourColor td').style.backgroundColor = randomColor;</script></td></tr></table>
+		
+	</p>
+
+	<table id="grid">
 		<tr id="first">
 			<td class="one" onClick='sendMessage("first-one-" + randomColor + "-" + myID)'></td>
 			<td class="two" onClick='sendMessage("first-two-" + randomColor + "-" + myID)'></td>

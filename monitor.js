@@ -67,6 +67,8 @@ updateGrid = function(response)
 	var who = presence.from.resource;
 	var what = message.payload;
 	var whatSplit = what.message.split("-");
+	
+	//Apply the changes
 	document.querySelector('#' + whatSplit[0] + ' .' + whatSplit[1]).style.backgroundColor = whatSplit[2];
 };
 

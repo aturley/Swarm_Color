@@ -8,23 +8,15 @@ var myResource = '349b8886737239917a2ccbeabe222dd81e5ab75f';
 //Give a special identity to the user
 var myID = Math.floor(Math.random()*1000000);
 
-//List off all colors
-var color = {
-	0: 'blue', 
-	1: 'green',
-	2: 'yellow', 
-	3: 'red', 
-	4: 'purple', 
-	5: 'aqua', 
-	6: 'fuchsia', 
-	7: 'lime', 
-	8: 'olive', 
-	9: 'teal'
-};
+//Generates a random color
+var red = Math.floor(Math.random()*256);
+var green = Math.floor(Math.random()*256);
+var blue = Math.floor(Math.random()*256);
+var randomColor = "rgb(" + red + ", " + green + ", " + blue + ")";
 
-//Generates a random color between 1 and ten
-var randomNumber = Math.floor(Math.random()*10);
-var randomColor = color[randomNumber];
+//display the random color to the user
+
+
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 //Send the message to everybody.
@@ -88,6 +80,7 @@ updateGrid = function(response)
 	var what = message.payload;
 	var whatSplit = what.message.split("-");
 
+	//Display your changes and only yours
 	if (whatSplit[3] == myID)
 	{
 		document.querySelector('#' + whatSplit[0] + ' .' + whatSplit[1]).style.backgroundColor = randomColor;
