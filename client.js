@@ -65,9 +65,9 @@ updateGrid = function(response)
 	message = JSON.parse(response).message;
 	var who = presence.from.resource;
 	var what = message.payload;
-
-	document.querySelector('#first .one').style.backgroundColor = what.message;
-
+	var whatSplit = what.message.split("-");
+	
+	document.querySelector('#' + whatSplit[0] + ' .' + whatSplit[1]).style.backgroundColor = whatSplit[2];
 };
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
