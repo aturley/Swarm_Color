@@ -39,3 +39,8 @@ strong
 {
 	color: blue;
 }
+
+#app, #broughtBy
+{
+	float: right;
+}
