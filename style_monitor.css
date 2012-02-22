@@ -1,0 +1,34 @@
+body
+{
+	font-family: Cabin, Arial, Helvetica, Sans-serif;
+	color: #404040;
+}
+
+img
+{
+	margin: -10px;
+}
+
+h2
+{
+	color: #606473;
+	font-size: 1.2em;
+	font-weight: 700;
+	border-top: 1px solid #CFCDC9;
+	padding-top: 10 px;
+}
+
+ul
+{
+	list-style-type: none;
+	padding-left: 0px;
+	height: 100px;
+	overflow: auto;
+}
+
+#monitorTable td
+{
+	background-color: #404040;
+	width: 150px;
+	height: 150px;
+}
