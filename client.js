@@ -5,6 +5,9 @@ var myApiKey = '9f1902427fb7159757f45ffe5a321746e4e95bcd';
 var mySwarm = '03d7320242228512a19d116ffd70e1c344676fbc';
 var myResource = '349b8886737239917a2ccbeabe222dd81e5ab75f';
 
+//Give a special identity to the user
+var myID = Math.floor(Math.random()*1000000);
+
 //List off all colors
 var color = {
 	0: 'blue', 
@@ -84,8 +87,11 @@ updateGrid = function(response)
 	var who = presence.from.resource;
 	var what = message.payload;
 	var whatSplit = what.message.split("-");
-	
-	document.querySelector('#' + whatSplit[0] + ' .' + whatSplit[1]).style.backgroundColor = randomColor;
+
+	if (whatSplit[3] == myID)
+	{
+		document.querySelector('#' + whatSplit[0] + ' .' + whatSplit[1]).style.backgroundColor = randomColor;
+	}
 };
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
