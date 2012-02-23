@@ -1,7 +1,3 @@
-//Creation of the table
-var mainTable = document.createElement('table');
-mainTable.id = 'monitorTable';
-
 //Creation of the columns
 var column = [];
 var numberColumns = 10;
@@ -39,8 +35,5 @@ for (var i = 0; i < numberColumns; i++)
 //Insertion of the "tr"s in the table
 for (var i = 0; i < numberColumns; i++)
 {
-	mainTable.appendChild(column[i]);
+	document.querySelector('.tableGeneration').appendChild(column[i]);
 }
-
-//Insertion of mainTable in the <body>
-document.body.appendChild(mainTable);
