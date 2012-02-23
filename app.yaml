@@ -12,6 +12,10 @@ handlers:
   static_files: favicon.ico
   upload: favicon.ico
 
+- url: /table_generation\.js
+  static_files: table_generation.js
+  upload: table_generation.js
+
 - url: /client.js
   static_files: client.js
   upload: client.js
